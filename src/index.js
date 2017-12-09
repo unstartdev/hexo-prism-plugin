@@ -165,11 +165,11 @@ function copyAssets() {
 function importAssets(code, data) {
   const js = [];
   const css = [
-    `<link rel="stylesheet" href="${rootPath}css/${prismThemeFileName}" type="text/css">`
+    `<link rel="preload" href="${rootPath}css/${prismThemeFileName}" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${rootPath}css/${prismThemeFileName}"></noscript>`
   ];
 
   if (line_number) {
-    css.push(`<link rel="stylesheet" href="${rootPath}css/prism-line-numbers.css" type="text/css">`);
+    css.push(`<link rel="preload" href="${rootPath}css/prism-line-numbers.css" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${rootPath}css/prism-line-numbers.css"></noscript>`);
   }
   if (mode === 'realtime') {
     js.push(`<script src="${rootPath}js/prism.js"></script>`);
