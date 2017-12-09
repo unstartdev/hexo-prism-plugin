@@ -169,7 +169,7 @@ function importAssets(code, data) {
   ];
 
   if (line_number) {
-    css.push(`<script>loadCSS("${rootPath}css/prism-line-numbers.css");<noscript><link rel="stylesheet" href="${rootPath}css/prism-line-numbers.css"></noscript>`);
+    css.push(`<script>loadCSS("${rootPath}css/prism-line-numbers.css");</script><noscript><link rel="stylesheet" href="${rootPath}css/prism-line-numbers.css"></noscript>`);
   }
   if (mode === 'realtime') {
     js.push(`<script src="${rootPath}js/prism.js"></script>`);
