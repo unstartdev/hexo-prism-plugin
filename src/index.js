@@ -165,7 +165,7 @@ function copyAssets() {
 function importAssets(code, data) {
   const js = [];
   const css = [
-    `<link rel="preload" href="${rootPath}css/${prismThemeFileName}" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${rootPath}css/${prismThemeFileName}"></noscript>`
+    `<script>loadCSS('${rootPath}css/${prismThemeFileName}');</script><noscript><link rel="stylesheet" href="${rootPath}css/${prismThemeFileName}"></noscript>`
   ];
 
   if (line_number) {
